@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family: "Poppins", "sans-serif";
+
+}
+
+@property --color-1{
+    syntax: "<color>";
+    inherits: true;
+    initial-value:rgb(85, 0, 255);;
+}
+
+@property --color-2{
+    syntax: "<color>";
+    inherits: true;
+    initial-value:rgb(247, 0, 255);;
+}
+
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.body{
+    height: 80%;
+    width: 40%;
+    background:transparent;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 20px;
+    outline-width: 2px;
+    outline-color: black;
+    margin-top: 150px;
+    
+    
+}
+ 
+.form{
+    outline-style: double;
+    outline-color: black;
+}
+
+.wrapper h1{
+    
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    
+
+}
+
+.email_input{
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    background:url(background.png);
+    
+    
+}
+
+.password_input{
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 10px;
+    background:url(background.png);
+    position: relative;
+    
+}
+
+
+   
+.button_submit_login{
+    --color-1: rgb(85, 0, 255);
+    --color-2: rgb(247, 0, 255);
+    height: 35px;
+    width: 200px;
+    margin-right: -87%;
+    margin-left: 200px;
+    margin-top: 10px;
+    border-radius: 20px;   
+    position: relative;
+    cursor: pointer;
+    background-image:
+     linear-gradient(
+        45deg, var(--color-1) ,var(--color-2));
+    transition: 
+    --color-1 1000ms, --color-2 1000ms;
+}
+
+
+.button_submit_login:hover,
+.button_submit_login:focus-visible {
+    --color-2: rgb(85, 0, 255);
+    --color-1: rgb(247, 0, 255);
+    
+  }
+
+
+.register_link{
+   
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.register_button{
+    background: rgb(255, 255, 255);
+    height: 25px;
+    width: 80px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 20px;
+    
+}
+
+
+
+.register_button:hover {
+    background-color: rgb(193, 164, 219);
+    transition: 400ms;
+    
+  }

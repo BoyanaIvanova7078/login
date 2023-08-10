@@ -1,0 +1,85 @@
+
+
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  height: 100vh;
+  background: url(background.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column; /* Arrange icons vertically */
+  align-items: flex-start; /* Align icons to the left */
+  margin-left: 20px; /* Add some space from the left */
+  
+}
+
+.social-icon {
+  position: relative; /* Needed for absolute positioning of the name */
+  display: inline-block;
+  margin: 10px 0; /* Adjust vertical spacing */
+  text-decoration: none;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  animation: spin 2s linear infinite;
+}
+
+.social-icon img {
+  width: 80px; /* Increase the width for bigger icons */
+  height: 80px; /* Increase the height proportionally */
+}
+
+.social-icon .name {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none; /* Prevent name from interfering with clicks */
+  transition: opacity 0.2s;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s, left 0.2s;
+}
+.social-icon:hover {
+  animation: spin 2s linear infinite, none; /* Apply rotation and remove continuous spin on hover */
+  transform: scale(1.2);
+}
+
+.social-icon:hover .name {
+  opacity: 1;
+}
+
+
+.social-icon:hover {
+  transform: scale(1.2);
+  animation: spin-once 1.5s linear 1;
+  transform: rotate(360deg);
+}
+
+@keyframes spin-once {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
